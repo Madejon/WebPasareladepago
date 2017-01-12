@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- INFORMACIÓN "META" -->
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Ejercicio - Desarrollo de una Pasarela de pago con diferentes campos y opciones.">
+<meta name="keywords" content="Ejercicio,Pasarela,Pago,Programación,Web,HTML,CSS,JavaScript">
+<meta name="author" content="Endika Bernaola">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- TITULO DE PÁGINA -->
+<title>Ejercicio | Pasarela de pago</title>
+
+	<!-- FAVICON E ICONO MÓVIL -->
+<link rel="icon" type="image/gif" href="img/favicon.gif">
+<link rel="apple-touch-icon" sizes="120x120" href="img/apple120.png"/>
+<link rel="apple-touch-icon" sizes="152x152" href="img/apple152.png"/>
+
+	<!-- HOJAS DE ESTILO -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+	<!-- CARGA JAVASCRIPT & JQUERY -->
+			<script src="js/bootstrap.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+			<script src="jquery/jquery.easing.1.3.js"></script>
+			<script src="js/javascript.js"></script>
+			
+	<!-- VALIDACION DE FORMULARIO -->
+			<script type="text/javascript">
+					function validacion() {
+					  if (condicion que debe cumplir el primer campo del formulario) {
+					    // Si no se cumple la condicion...
+					    alert('[ERROR] El campo debe tener un valor de apropiado');
+					    return false;
+					  }
+					  else if (condicion que debe cumplir el segundo campo del formulario) {
+					    // Si no se cumple la condicion...
+					    alert('[ERROR] El campo debe tener un valor de apropiado');
+					    return false;
+					  }
+					  ...
+					  else if (condicion que debe cumplir el último campo del formulario) {
+					    // Si no se cumple la condicion...
+					    alert('[ERROR] El campo debe tener un valor apropiado');
+					    return false;
+					  }
+					 
+					  // Si el script ha llegado a este punto, todas las condiciones
+					  // se han cumplido, por lo que se devuelve el valor true
+					  return true;
+					}
+			</script>
+								
+</head>
+<body>
+
+	<!-- CABECERA IMÁGENES -->
+<div id="cabecera" class="container-fluid">
+			<a href="http://www.samsung.com" onMouseOver="playclip()" target="_blank"><img class="img-responsive" title="Ir a samsung" alt="img-samsung" src="img/cabecera/samsung.png"></a>
+			<a href="http://www.lenovo.com" onMouseOver="playclip()" target="_blank"><img class="img-responsive" title="Ir a lenovo" alt="img-lenovo" src="img/cabecera/lenovo.png"></a>
+			<a href="http://www.asus.com" onMouseOver="playclip()" target="_blank"><img class="img-responsive" title="Ir a Asus" alt="img-asus" src="img/cabecera/asus.png"></a>
+			<a href="http://www.citibank.com" onMouseOver="playclip()" target="_blank"><img class="img-responsive" title="Ir a CitiBank" alt="img-citibank" src="img/cabecera/citibank.jpg"></a>
+</div>
+
+	<!-- MENU PRINCIPAL -->
+	<nav id="mprincipal" class="container-fluid">
+		<div class="content">
+				<ul id="sdt_menu" class="sdt_menu">
+					<li>
+						<a href="index.html">
+							<img src="img/menu/5.jpg" alt="imginicio"/>
+							<span class="sdt_active"></span>
+							<span class="sdt_wrap">
+								<span class="sdt_link">Inicio</span>
+								<span class="sdt_descr">Empecemos</span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.w3schools.com/" target="blank">
+							<img src="img/menu/w3schools.jpg" alt="imgw3schools"/>
+							<span class="sdt_active"></span>
+							<span class="sdt_wrap">
+								<span class="sdt_link">w3schools</span>
+								<span class="sdt_descr">Aprende por ti mismo</span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://librosweb.es/" target="blank">
+							<img src="img/menu/librosweb.png" alt="imglibrosweb"/>
+							<span class="sdt_active"></span>
+							<span class="sdt_wrap">
+								<span class="sdt_link">LibrosWeb</span>
+								<span class="sdt_descr">Sitio de referencia</span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/menu/talentum.png" alt="imgcurso"/>
+							<span class="sdt_active"></span>
+							<span class="sdt_wrap">
+								<span class="sdt_link">Curso Java</span>
+								<span class="sdt_descr">Desarrollo web</span>
+							</span>
+						</a>
+						<div class="sdt_box">
+								<a href="http://empleodigitalformacion.fundaciontelefonica.com/" target="blank">Plataforma</a>
+								<a href="https://empleodigital.slack.com/" target="blank">Slack</a>
+						</div>
+					</li>
+					<li>
+						<a href="https://www.google.es" target="blank">
+							<img src="img/menu/google.jpg" alt="imggoogle"/>
+							<span class="sdt_active"></span>
+							<span class="sdt_wrap">
+								<span class="sdt_link">Google</span>
+								<span class="sdt_descr">El mundo a un Clic</span>
+							</span>
+						</a>
+						<div class="sdt_box">
+							<a href="https://mail.google.com" target="blank">Gmail</a>
+							<a href="https://drive.google.com" target="blank">Google Drive</a>
+							<a href="https://www.youtube.com" target="blank">Youtube</a>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.bilbohouse.xyz" target="blank">
+							<img src="img/menu/yo.jpg" alt="imgyo"/>
+							<span class="sdt_active"></span>
+							<span class="sdt_wrap">
+								<span class="sdt_link">Sobre mí</span>
+								<span class="sdt_descr">Conoceme</span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<div id="liveclock"></div>
+					</li>
+				</ul>
+			</div>
+	</nav>
+	
+
+	<!-- BARRA LATERAL -->
+<div class="container">
+	<div class="row">
+	<div class="col-md-3 col-sm-12 col-xs-12">
+	<aside>
+			<h3>Cabecera</h3>
+					<ul>
+						<li>Imágenes</li>
+						<li>Enlaces</li>
+						<li>Sonido "mouseover"</li>
+						<li>Sombra "mouseover"</li>
+					</ul>
+			<h3>Menú horizontal</h3>
+					<ul>
+						<li>jQuery</li>
+						<li>Slider</li>
+						<li>Fotos integradas</li>
+						<li>Reloj</li>
+					</ul>
+			<h3>Formulario</h3>
+					<ul>
+						<li>Focalizado "Nombre"</li>
+						<li>Campos de texto</li>
+						<li>Selector desplegable</li>
+						<li>Campos requeridos</li>
+						<li>Botones radio</li>
+						<li>Pago según selección</li>
+						<li>Caráteres permitidos</li>
+						<li>Botón de envio</li>
+					</ul>
+			<h3>Pie</h3>
+					<ul>
+						<li>Videos</li>
+						<li>Copyright</li>
+						<li>Script Año</li>
+						<li>Enlace a Autor</li>
+					</ul>
+	</aside>
+	</div>
+
+	<!-- FORMULARIO DE PAGO -->
+<main>
+	<fieldset id="principal" class="col-md-8 col-sm-12 col-xs-12">
+			<h1>Formulario de pago</h1>
+			<p>Rellena el siguiente formulario para realizar el pago de tus productos.</p>
+			<form name="fpago" action="" method="" id="" name="" onsubmit="return validacion()">
+				<div>
+					<div>
+						<div>
+							<label>Nombre:</label><br>
+								<input type="text" name="nombre" id="nombre" size="30" required="required">
+						</div>
+						<div>
+							<label>Apellidos:</label><br>
+								<input type="text" name="apellido1" size="30" required="required">
+								<input type="text" name="apellido2" size="30" required="required">
+						</div>
+					</div>
+				</div>
+				<div><!-- DIRECCION -->
+					<label> Dirección:</label><br>
+						<input type="text" name="direccion" size="30" maxlength="50" required="required">
+					<label>Provincia:</label>
+						<select id="provincia" size="1" required="required">
+		        			<option value="BI">Bizkaia</option>
+							<option value="GI">Gipuzkoa</option>
+							<option value="AR">Araba</option>
+		      			</select>
+				</div>
+				<div><!-- SELECCION METODO DE PAGO -->
+					<label>Selecciona el método de pago:</label>
+					  	<label><img alt="visalogo" src="img/visa.png"></label>
+						   	<input type="radio" name="radio-1" id="visa" value="visa" onclick="selectpago(this.value)">
+					    <label><img alt="mastercardlogo" src="img/mastercard.png"></label>
+					   		<input type="radio" name="radio-1" id="mastercard" value="mastercard" onclick="selectpago(this.value)">
+					    <label><img alt="paypallogo" src="img/paypal.png"></label>
+					    	<input type="radio" name="radio-1" id="paypal" value=paypal onclick="selectpago(this.value)">
+				</div>
+			<div id="tarjeta">
+				<div><!-- TARJETA DE CREDITO -->
+					<label>Tarjeta:</label>
+						<input class="inputCard" type="text" name="numtarjeta1" onKeyPress="return permite(event, 'num')" id="numtarjeta1" size="3" maxlength="4"/>
+						-
+						<input class="inputCard" type="text" name="numtarjeta2" onKeyPress="return permite(event, 'num')" id="numtarjeta2" size="3" maxlength="4"/>
+						-
+						<input class="inputCard" type="text" name="numtarjeta3" onKeyPress="return permite(event, 'num')" id="numtarjeta3" size="3" maxlength="4"/>
+						-
+						<input class="inputCard" type="text" name="numtarjeta4" onKeyPress="return permite(event, 'num')" id="numtarjeta4" size="3" maxlength="4"/>
+					<br>
+					<label>Caducidad:</label>
+						<select name='expireMM' id='cadtarjeta-mes' required="required">
+							<option value=''>Mes</option>
+						    <option value='01'>Enero</option>
+						    <option value='02'>Febrero</option>
+						    <option value='03'>Mayo</option>
+						    <option value='04'>Abril</option>
+						    <option value='05'>Mayo</option>
+						    <option value='06'>Junio</option>
+						    <option value='07'>Julio</option>
+						    <option value='08'>Agosto</option>
+						    <option value='09'>Septiembre</option>
+						    <option value='10'>Octubre</option>
+						    <option value='11'>Noviembre</option>
+						    <option value='12'>Diciembre</option>
+						</select>
+						<select name='expireYY' id='cadtarjeta-ano' required="required">
+						    <option value=''>Año</option>
+						    <option value='16'>2016</option>
+						    <option value='17'>2017</option>
+						    <option value='18'>2018</option>
+						</select>
+					<label>Código (CSC):</label>
+						<input type="text" name="csctarjeta" onKeyPress="return permite(event, 'num')" required="required" size="2" maxlength="3">
+					<br>
+					<label>Documento Nacional de Identidad:</label>
+						<input type="text" name="dni" required="required">
+				</div>
+			</div>
+			<div id="emailpaypal" class="oculto">
+					<label>Correo electrónico:</label>
+						<input type="email" name="emailpaypal" required="required" size="30">
+			</div>
+			<div id="aficiones">
+					<h3>Queremos conocerte mejor</h3>
+					<hr>
+					<p>Selecciona algunas aficiones para poder enviarte ofertas de productos</p>
+						<label>Fútbol</label>
+							<input type="checkbox" name="futbol">
+						<label>Montaña</label>
+							<input type="checkbox" name="Montaña">
+						<label>Música</label>
+							<input type="checkbox" name="musica">
+						<label>Buceo</label>
+							<input type="checkbox" name="Buceo">
+						
+			</div>
+			
+			
+			
+				<div style="text-align: center;"><!-- BOTON DE FORMULARIO -->
+					<input class="benviar" type="button" value="Enviar" onMouseOver="playclip()" onClick="this.disabled=true; this.value=Enviando...; this.form.submit()"/>
+					<input class="bborrar" type="reset" value="Reset" onMouseOver="playclip()">
+				</div>
+			</form>
+	</fieldset>
+	</main>
+	</div>
+</div>
+
+<br>
+<br>
+
+
+
+<footer class="container-fluid">
+	<div>
+			<div id="videotutos"><!-- VIDEOS FOOTER -->
+				<h3>Video tuturiales</h3>
+				<hr>
+					<iframe src="https://www.youtube.com/embed/trO260RSW1o?list=PL6hPvfzEEMDaKYAabXoDL7A-fZcwxvIqe"></iframe>
+					<iframe src="https://www.youtube.com/embed/xnWtGNiG2lg"></iframe>
+					<iframe src="https://www.youtube.com/embed/i_gxsd-_qHE?list=PLK7sa90aSLe6hcBwaZsW6m0h1RQEdml9G"></iframe>
+					<iframe src="https://www.youtube.com/embed/X1l95tQM2yI"></iframe>
+			</div>
+			<div>
+					<p id="copyright">Copyright &copy; <script type="text/javascript">var cur = 2016; var year = new Date(); if(cur == year.getFullYear()) year = year.getFullYear(); else year = cur + ' - ' + year.getFullYear(); document.write(year);</script> | <a href="http://www.bilbohouse.xyz">BilboHouse Designs</a></p>
+			</div>
+	</div>
+</footer>
+		<!-- COOKIES -->
+<div id="barraaceptacion">
+    <div class="inner">
+        Esta web utiliza cookies propias y de terceros para ofrecerte un mejor servicio. Si continuas navegando, consideramos que aceptas su uso.
+        <a href="javascript:void(0);" class="ok" onClick="PonerCookie();"><b>Aceptar</b></a> 
+    </div>
+</div>
+ 
+
+ 
+<script>// COOKIES
+function getCookie(c_name){
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1){
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1){
+        c_value = null;
+    }else{
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1){
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start,c_end));
+    }
+    return c_value;
+}
+ 
+function setCookie(c_name,value,exdays){
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+ 
+if(getCookie('avisocookie')!="1"){
+    document.getElementById("barraaceptacion").style.display="block";
+}
+function PonerCookie(){
+    setCookie('avisocookie','1',365);
+    document.getElementById("barraaceptacion").style.display="none";
+}
+</script>
+		<!--  FIN COOKIES  -->
+
+</body>
+<audio>
+<source src="sounds/click.mp3"></source>
+<source src="sounds/click.ogg"></source>
+</audio>
+</html>
